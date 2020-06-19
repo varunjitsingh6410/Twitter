@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#15202c"
     tools:context=".ComposeActivity">
 
     <EditText
@@ -19,7 +19,9 @@
         android:gravity="start|top"
         android:hint="What's happening?"
         android:inputType="textMultiLine"
-        android:minLines="5" />
+        android:minLines="5"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
 
     <Button
         android:id="@+id/btnTweet"
@@ -29,7 +31,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
-        android:text="@string/tweet" />
+        android:backgroundTint="#2ba1f2"
+        android:text="@string/tweet"
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/tvCharactercount"
@@ -39,5 +43,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:text="280 characters left" />
+        android:text="280 characters left"
+        android:textColor="#ffffff" />
 </RelativeLayout>
