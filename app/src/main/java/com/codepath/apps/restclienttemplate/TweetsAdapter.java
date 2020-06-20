@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import org.parceler.Parcels;
@@ -72,6 +73,8 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
 
         RelativeLayout container;
 
+        TextView tvHandle;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
@@ -80,15 +83,23 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
 
             tvCreatedAt = itemView.findViewById(R.id.tvCreatedAt);
 
+            tvHandle = itemView.findViewById(R.id.tvHandle);
+
             container = itemView.findViewById(R.id.container);
         }
 
         public void bind(final Tweet tweet) {
+
+            int radius = 30; // corner radius, higher value = more rounded
+            Glide.with(context).load(tweet.user.profileImageUrl).transform(new RoundedCorners(radius)).into(ivProfileImage);
+
+
             tvBody.setText(tweet.body);
-            tvScreenName.setText(tweet.user.screenName);
-            Glide.with(context).load(tweet.user.profileImageUrl).into(ivProfileImage);
+            tvScreenName.setText(tweet.user.name);
 
             tvCreatedAt.setText(tweet.createdAt);
+
+            tvHandle.setText("@" + tweet.user.screenName);
 
             container.setOnClickListener(new View.OnClickListener() {
                 @Override
