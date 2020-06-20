@@ -8,7 +8,7 @@
     tools:context=".TweetDetailsActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/profilePictureDetails"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="6dp"
-        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/profilePictureDetails"
         android:hint="Varun Jit Singh"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
@@ -48,7 +48,7 @@
         android:layout_below="@+id/tvUserNameDetails"
         android:layout_marginStart="21dp"
         android:layout_marginTop="19dp"
-        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/profilePictureDetails"
         android:hint="@varunjitsingh6410"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
@@ -57,10 +57,11 @@
         android:id="@+id/tvTweetBodyDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
+        android:layout_below="@+id/profilePictureDetails"
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
         android:hint="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
 
     <ImageButton
@@ -76,7 +77,7 @@
         app:srcCompat="@drawable/ic_vector_heart_stroke" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnRetweet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTweetBodyDetails"
