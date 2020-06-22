@@ -44,8 +44,9 @@ public class TweetDetailsActivity extends AppCompatActivity {
         int radius = 30; // corner radius, higher value = more rounded
         Glide.with(getApplicationContext()).load(tweet.user.profileImageUrl).transform(new RoundedCorners(radius)).into(profilePictureDetails);
 
-        tvUserNameDetails.setText(tweet.user.screenName);
+        tvUserNameDetails.setText(tweet.user.name);
         tvTimeStampDetails.setText(tweet.createdAt);
         tvTweetBodyDetails.setText(tweet.body);
+        tvUserHandleDetails.setText("@"+tweet.user.screenName);
     }
 }
