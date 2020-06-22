@@ -135,11 +135,21 @@ public class TweetDetailsActivity extends AppCompatActivity {
                         @Override
                         public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
                         }
-                    }, tweet.id);
+                    }, tweet.id, "retweet");
                 }
                 else
                 {
-                    //
+                    client.retweetTweet(new JsonHttpResponseHandler() {
+                        @Override
+                        public void onSuccess(int statusCode, Headers headers, JSON json) {
+                            btnRetweet.setBackgroundResource(R.drawable.ic_vector_retweet_stroke);
+                            isRetweeted = true;
+                        }
+
+                        @Override
+                        public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
+                        }
+                    }, tweet.id, "unretweet");
                 }
             }
         });

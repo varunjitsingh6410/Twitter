@@ -77,8 +77,8 @@ public class TwitterClient extends OAuthBaseClient {
 		client.post(apiUrl, params, "", handler);
 	}
 
-	public void retweetTweet(JsonHttpResponseHandler handler, long tweetId) {
-		String apiUrl = getApiUrl("statuses/retweet/" + tweetId + ".json");
+	public void retweetTweet(JsonHttpResponseHandler handler, long tweetId, String operation) {
+		String apiUrl = getApiUrl("statuses/" + operation + "/" + tweetId + ".json");
 		// Can specify query string params directly or through RequestParams.
 		RequestParams params = new RequestParams();
 		params.put("id", tweetId);
