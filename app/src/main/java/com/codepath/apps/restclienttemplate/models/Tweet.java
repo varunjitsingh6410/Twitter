@@ -40,6 +40,12 @@ public class Tweet {
     @Ignore
     public User user;
 
+    @Ignore
+    public static boolean isFavorite;
+
+    @Ignore
+    public static boolean isRetweeted;
+
     public Tweet() {}
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException
@@ -52,6 +58,9 @@ public class Tweet {
         User user = User.fromJson(jsonObject.getJSONObject("user"));
         tweet.user = user;
         tweet.userId = user.id;
+
+        isFavorite = jsonObject.getBoolean("favorited");
+        isRetweeted = jsonObject.getBoolean("retweeted");
 
         return tweet;
     }

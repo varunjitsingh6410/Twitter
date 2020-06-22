@@ -72,9 +72,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/ic_vector_heart_stroke"
-        android:tint="#FFFFFF"
-        app:srcCompat="@drawable/ic_vector_heart_stroke" />
+        android:tint="#FFFFFF" />
 
     <ImageButton
         android:id="@+id/btnRetweet"
@@ -84,8 +82,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/ic_vector_retweet"
-        android:tint="#FFFFFF"
-        app:srcCompat="@drawable/ic_vector_retweet" />
+        android:tint="#FFFFFF" />
 
 </RelativeLayout>
