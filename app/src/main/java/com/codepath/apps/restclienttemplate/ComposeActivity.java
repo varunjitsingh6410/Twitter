@@ -46,6 +46,7 @@ public class ComposeActivity extends AppCompatActivity {
 
         tvCharactercount = findViewById(R.id.tvCharactercount);
 
+
         // This updates the live character count
         etCompose.addTextChangedListener(new TextWatcher() {
             @Override

@@ -126,7 +126,7 @@ public class TimelineActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
-                Log.e(TAG, "on failure for on load more data");
+                Log.e(TAG, "on failure for on load more data" + statusCode);
             }
         }, tweets.get(tweets.size()-1).id);
     }
