@@ -199,6 +199,7 @@ public class TweetDetailsActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(int statusCode, Headers headers, JSON json) {
                             btnFavorite.setBackgroundResource(R.drawable.ic_vector_heart_stroke);
+                            Toast.makeText(getApplicationContext(), "Favorite removed", Toast.LENGTH_SHORT).show();
                             isFavorite = false;
                         }
 
@@ -213,6 +214,7 @@ public class TweetDetailsActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(int statusCode, Headers headers, JSON json) {
                             btnFavorite.setBackgroundResource(R.drawable.ic_vector_heart);
+                            Toast.makeText(getApplicationContext(), "Favorite added", Toast.LENGTH_SHORT).show();
                             isFavorite = true;
                         }
 
@@ -235,6 +237,7 @@ public class TweetDetailsActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(int statusCode, Headers headers, JSON json) {
                             btnRetweet.setBackgroundResource(R.drawable.ic_vector_retweet);
+                            Toast.makeText(getApplicationContext(), "Retweet added", Toast.LENGTH_SHORT).show();
                             isRetweeted = true;
                         }
 
@@ -249,6 +252,7 @@ public class TweetDetailsActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(int statusCode, Headers headers, JSON json) {
                             btnRetweet.setBackgroundResource(R.drawable.ic_vector_retweet_stroke);
+                            Toast.makeText(getApplicationContext(), "Retweet removed", Toast.LENGTH_SHORT).show();
                             isRetweeted = true;
                         }
 

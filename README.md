@@ -1,3 +1,30 @@
+# Project 3 - *Twitter*
+
+**Twitter** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+
+Time spent: **6** hours spent in total
+
+## User Stories
+
+The following  functionality is completed:
+
+* [x] User can **see a counter with total number of characters left for tweet** on compose tweet page
+* [x] User can **pull down to refresh tweets timeline**
+* [x] User is using **"Twitter branded" colors and styles**
+* [x] User can **select "reply" from detail view to respond to a tweet**
+  * [x] User that wrote the original tweet is **automatically "@" replied in compose**
+* [x] User can tap a tweet to **open a detailed tweet view**
+  * [x] User can **take favorite (and unfavorite) or reweet** actions on a tweet
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://i.imgur.com/76cW7Bp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
 # Project 2 - *Twitter*
 
 **Twitter** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).

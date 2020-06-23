@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -104,7 +103,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             container.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context, "test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "test", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(context, TweetDetailsActivity.class);
                     i.putExtra("tweet", Parcels.wrap(tweet));
                     context.startActivity(i);
